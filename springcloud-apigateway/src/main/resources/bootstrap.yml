@@ -1,0 +1,12 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: gateway-springcloud
+  cloud:
+    gateway:
+      routes:
+        - id: test-client
+          uri: http://192.168.60.67:8082/
+          predicates:
+            - Path=/api/v1/test-client/**
