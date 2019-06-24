@@ -5,7 +5,7 @@ plugins {
 apply(plugin = "kotlin-jpa")
 
 springBoot {
-    mainClassName = "com.suyang.testserver.TestServerApplication"
+    mainClassName = "com.suyang.testserver.TestServerApplicationKt"
 }
 
 dependencies {

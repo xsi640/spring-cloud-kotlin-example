@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     id("org.springframework.boot") version "2.1.5.RELEASE"
@@ -6,6 +7,10 @@ plugins {
     kotlin("jvm") version "1.3.31"
     kotlin("plugin.spring") version "1.3.31"
 }
+
+val bootJar: BootJar by tasks
+
+bootJar.enabled = false
 
 allprojects {
     apply {
@@ -57,7 +62,9 @@ subprojects {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-        implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
     }
+
+    val bootJar: BootJar by tasks
+
+    bootJar.enabled = true
 }

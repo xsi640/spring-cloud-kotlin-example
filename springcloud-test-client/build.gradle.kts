@@ -1,5 +1,5 @@
 springBoot {
-    mainClassName = "com.suyang.testserver.TestClientApplication"
+    mainClassName = "com.suyang.testclient.TestClientApplicationKt"
 }
 
 dependencies {
