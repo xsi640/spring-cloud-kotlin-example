@@ -55,6 +55,8 @@ allprojects {
 
 subprojects {
     dependencies {
+        implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+        implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
         implementation("org.springframework.cloud:spring-cloud-starter")
 
         implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")

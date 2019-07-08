@@ -4,9 +4,7 @@ spring:
   application:
     name: api-gateway
   cloud:
-    gateway:
-      routes:
-        - id: test-client
-          uri: http://192.168.60.45:8082/
-          predicates:
-            - Path=/api/v1/test-client/**
+    nacos:
+      config:
+        server-addr: 192.168.61.100:8848
+        file-extension: yaml

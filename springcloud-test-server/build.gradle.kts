@@ -13,7 +13,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("com.h2database:h2")
 
-
     implementation("org.springframework.cloud:spring-cloud-starter-alibaba-sentinel:${rootProject.extra.get("nacos")}")
     implementation("org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config:${rootProject.extra.get("nacos")}")
     implementation("org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${rootProject.extra.get("nacos")}")
