@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-class TestClientApplication
+class TestClientApplication {}
 
 fun main(args: Array<String>) {
     runApplication<TestClientApplication>(*args)

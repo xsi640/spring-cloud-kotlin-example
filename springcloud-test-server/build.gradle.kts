@@ -11,9 +11,9 @@ springBoot {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("com.h2database:h2")
+    implementation("mysql:mysql-connector-java")
 
-    implementation("org.springframework.cloud:spring-cloud-starter-alibaba-sentinel:${rootProject.extra.get("nacos")}")
-    implementation("org.springframework.cloud:spring-cloud-starter-alibaba-nacos-config:${rootProject.extra.get("nacos")}")
-    implementation("org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery:${rootProject.extra.get("nacos")}")
+    implementation("com.ctrip.framework.apollo:apollo-client:${rootProject.extra.get("apollo")}")
+    implementation("org.springframework.cloud:spring-cloud-starter-alibaba-sentinel")
+    implementation("org.springframework.cloud:spring-cloud-starter-alibaba-nacos-discovery")
 }

@@ -24,7 +24,8 @@ allprojects {
     ext {
         set("springCloud", "Greenwich.RELEASE")
         set("springBoot", "2.1.5.RELEASE")
-        set("nacos", "0.9.0.RELEASE")
+        set("alibaba", "0.9.0.RELEASE")
+        set("apollo", "1.4.0")
     }
 
     group = "com.suyang"
@@ -49,6 +50,7 @@ allprojects {
     dependencyManagement {
         imports {
             mavenBom("org.springframework.cloud:spring-cloud-dependencies:${ext.get("springCloud")}")
+            mavenBom("org.springframework.cloud:spring-cloud-alibaba-dependencies:${ext.get("alibaba")}")
         }
     }
 }
